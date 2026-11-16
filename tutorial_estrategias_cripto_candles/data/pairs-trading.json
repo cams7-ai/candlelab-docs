@@ -1,0 +1,556 @@
+{
+  "aviso": "DADOS SINTÉTICOS. Entradas e saídas selecionadas para produzir exemplo lucrativo. Não constitui backtest nem execução real.",
+  "par": "BTC/USDT",
+  "intervalo": "1h",
+  "moeda_cotacao": "USDT",
+  "estrategia": "Pairs Trading",
+  "indicadores_explicativos": "Z-score da razão BTC/USDT vs ETH/USDT",
+  "sinais": [
+    {
+      "tipo": "COMPRA",
+      "time_utc": "2026-01-12T22:00:00Z",
+      "preco_usdt": 94600.69
+    },
+    {
+      "tipo": "VENDA",
+      "time_utc": "2026-01-14T08:00:00Z",
+      "preco_usdt": 97551.6
+    }
+  ],
+  "preco_medio_compra_usdt": 94600.69,
+  "preco_venda_usdt": 97551.6,
+  "taxa_compra": 0.001,
+  "taxa_venda": 0.001,
+  "retorno_liquido_hipotetico_percentual": 2.9133,
+  "observacoes": "Sem spread/slippage/impostos; DCA assume aportes iguais em USDT; arbitragem requer dois mercados; pares e ranking requerem séries adicionais.",
+  "ohlcv": [
+    {
+      "time_utc": "2026-01-12T00:00:00Z",
+      "open": 95886.81,
+      "high": 96187.31,
+      "low": 95638.3,
+      "close": 95956.81,
+      "volume_simulado": 60.89
+    },
+    {
+      "time_utc": "2026-01-12T01:00:00Z",
+      "open": 95944.28,
+      "high": 96265.2,
+      "low": 95665.98,
+      "close": 96035.43,
+      "volume_simulado": 65.55
+    },
+    {
+      "time_utc": "2026-01-12T02:00:00Z",
+      "open": 95988.18,
+      "high": 96496.13,
+      "low": 95750.21,
+      "close": 96377.62,
+      "volume_simulado": 62.36
+    },
+    {
+      "time_utc": "2026-01-12T03:00:00Z",
+      "open": 96279.81,
+      "high": 96612.58,
+      "low": 96150.73,
+      "close": 96364.57,
+      "volume_simulado": 67.2
+    },
+    {
+      "time_utc": "2026-01-12T04:00:00Z",
+      "open": 96380.03,
+      "high": 96799.15,
+      "low": 96216.39,
+      "close": 96655.82,
+      "volume_simulado": 70.86
+    },
+    {
+      "time_utc": "2026-01-12T05:00:00Z",
+      "open": 96615.73,
+      "high": 96799.14,
+      "low": 96453.64,
+      "close": 96719.14,
+      "volume_simulado": 88.97
+    },
+    {
+      "time_utc": "2026-01-12T06:00:00Z",
+      "open": 96680.64,
+      "high": 96939.74,
+      "low": 96407.06,
+      "close": 96619.66,
+      "volume_simulado": 57.19
+    },
+    {
+      "time_utc": "2026-01-12T07:00:00Z",
+      "open": 96671.77,
+      "high": 97099.23,
+      "low": 96591.07,
+      "close": 96946.78,
+      "volume_simulado": 61.83
+    },
+    {
+      "time_utc": "2026-01-12T08:00:00Z",
+      "open": 96754.02,
+      "high": 97148.04,
+      "low": 96522.85,
+      "close": 96981.62,
+      "volume_simulado": 75.78
+    },
+    {
+      "time_utc": "2026-01-12T09:00:00Z",
+      "open": 96882.94,
+      "high": 97042.62,
+      "low": 96494.86,
+      "close": 96759.71,
+      "volume_simulado": 55.73
+    },
+    {
+      "time_utc": "2026-01-12T10:00:00Z",
+      "open": 96912.52,
+      "high": 97064.5,
+      "low": 96640.81,
+      "close": 96972.82,
+      "volume_simulado": 57.69
+    },
+    {
+      "time_utc": "2026-01-12T11:00:00Z",
+      "open": 96915.93,
+      "high": 97242.21,
+      "low": 96712.17,
+      "close": 97077.65,
+      "volume_simulado": 64.11
+    },
+    {
+      "time_utc": "2026-01-12T12:00:00Z",
+      "open": 96994.4,
+      "high": 97235.01,
+      "low": 96699.09,
+      "close": 96868.49,
+      "volume_simulado": 79.24
+    },
+    {
+      "time_utc": "2026-01-12T13:00:00Z",
+      "open": 96952.42,
+      "high": 97219.06,
+      "low": 96426.81,
+      "close": 96610.61,
+      "volume_simulado": 54.83
+    },
+    {
+      "time_utc": "2026-01-12T14:00:00Z",
+      "open": 96596.38,
+      "high": 96681.78,
+      "low": 96410.92,
+      "close": 96601.78,
+      "volume_simulado": 46.84
+    },
+    {
+      "time_utc": "2026-01-12T15:00:00Z",
+      "open": 96473.43,
+      "high": 96556.85,
+      "low": 95961.92,
+      "close": 96214.18,
+      "volume_simulado": 56.16
+    },
+    {
+      "time_utc": "2026-01-12T16:00:00Z",
+      "open": 96128.03,
+      "high": 96211.16,
+      "low": 95811.22,
+      "close": 96057.0,
+      "volume_simulado": 66.92
+    },
+    {
+      "time_utc": "2026-01-12T17:00:00Z",
+      "open": 96192.15,
+      "high": 96272.15,
+      "low": 95985.68,
+      "close": 96079.34,
+      "volume_simulado": 98.45
+    },
+    {
+      "time_utc": "2026-01-12T18:00:00Z",
+      "open": 96039.33,
+      "high": 96318.61,
+      "low": 95597.41,
+      "close": 95777.51,
+      "volume_simulado": 78.04
+    },
+    {
+      "time_utc": "2026-01-12T19:00:00Z",
+      "open": 95858.89,
+      "high": 96032.2,
+      "low": 95067.74,
+      "close": 95158.63,
+      "volume_simulado": 68.6
+    },
+    {
+      "time_utc": "2026-01-12T20:00:00Z",
+      "open": 95129.56,
+      "high": 95295.54,
+      "low": 94919.17,
+      "close": 95137.37,
+      "volume_simulado": 67.8
+    },
+    {
+      "time_utc": "2026-01-12T21:00:00Z",
+      "open": 95226.91,
+      "high": 95414.55,
+      "low": 94887.0,
+      "close": 95151.68,
+      "volume_simulado": 70.84
+    },
+    {
+      "time_utc": "2026-01-12T22:00:00Z",
+      "open": 95099.93,
+      "high": 95340.54,
+      "low": 94476.77,
+      "close": 94600.69,
+      "volume_simulado": 56.02
+    },
+    {
+      "time_utc": "2026-01-12T23:00:00Z",
+      "open": 94559.84,
+      "high": 95176.33,
+      "low": 94346.81,
+      "close": 95034.42,
+      "volume_simulado": 63.0
+    },
+    {
+      "time_utc": "2026-01-13T00:00:00Z",
+      "open": 94951.48,
+      "high": 95198.16,
+      "low": 94346.63,
+      "close": 94616.66,
+      "volume_simulado": 85.99
+    },
+    {
+      "time_utc": "2026-01-13T01:00:00Z",
+      "open": 94483.08,
+      "high": 95171.56,
+      "low": 94328.32,
+      "close": 94912.32,
+      "volume_simulado": 36.74
+    },
+    {
+      "time_utc": "2026-01-13T02:00:00Z",
+      "open": 94974.19,
+      "high": 95137.67,
+      "low": 94647.83,
+      "close": 94729.77,
+      "volume_simulado": 46.99
+    },
+    {
+      "time_utc": "2026-01-13T03:00:00Z",
+      "open": 94696.2,
+      "high": 95227.48,
+      "low": 94553.61,
+      "close": 95018.04,
+      "volume_simulado": 37.24
+    },
+    {
+      "time_utc": "2026-01-13T04:00:00Z",
+      "open": 94878.07,
+      "high": 95197.08,
+      "low": 94659.3,
+      "close": 95031.2,
+      "volume_simulado": 74.83
+    },
+    {
+      "time_utc": "2026-01-13T05:00:00Z",
+      "open": 94823.41,
+      "high": 95158.88,
+      "low": 94637.06,
+      "close": 95021.09,
+      "volume_simulado": 69.01
+    },
+    {
+      "time_utc": "2026-01-13T06:00:00Z",
+      "open": 94903.21,
+      "high": 95331.26,
+      "low": 94678.06,
+      "close": 95184.73,
+      "volume_simulado": 73.45
+    },
+    {
+      "time_utc": "2026-01-13T07:00:00Z",
+      "open": 95083.77,
+      "high": 95265.03,
+      "low": 94595.31,
+      "close": 94793.71,
+      "volume_simulado": 75.25
+    },
+    {
+      "time_utc": "2026-01-13T08:00:00Z",
+      "open": 94713.42,
+      "high": 95153.8,
+      "low": 94457.51,
+      "close": 94977.65,
+      "volume_simulado": 64.77
+    },
+    {
+      "time_utc": "2026-01-13T09:00:00Z",
+      "open": 94886.48,
+      "high": 95012.68,
+      "low": 94698.55,
+      "close": 94898.61,
+      "volume_simulado": 58.47
+    },
+    {
+      "time_utc": "2026-01-13T10:00:00Z",
+      "open": 94945.39,
+      "high": 95109.39,
+      "low": 94829.52,
+      "close": 94982.1,
+      "volume_simulado": 85.18
+    },
+    {
+      "time_utc": "2026-01-13T11:00:00Z",
+      "open": 94900.14,
+      "high": 94988.42,
+      "low": 94789.71,
+      "close": 94882.69,
+      "volume_simulado": 40.45
+    },
+    {
+      "time_utc": "2026-01-13T12:00:00Z",
+      "open": 94929.03,
+      "high": 95208.59,
+      "low": 94749.4,
+      "close": 94991.82,
+      "volume_simulado": 92.35
+    },
+    {
+      "time_utc": "2026-01-13T13:00:00Z",
+      "open": 94885.61,
+      "high": 95376.67,
+      "low": 94695.96,
+      "close": 95141.99,
+      "volume_simulado": 54.01
+    },
+    {
+      "time_utc": "2026-01-13T14:00:00Z",
+      "open": 95171.75,
+      "high": 95439.89,
+      "low": 94827.82,
+      "close": 94935.0,
+      "volume_simulado": 85.25
+    },
+    {
+      "time_utc": "2026-01-13T15:00:00Z",
+      "open": 95192.18,
+      "high": 95646.05,
+      "low": 95108.71,
+      "close": 95407.61,
+      "volume_simulado": 92.19
+    },
+    {
+      "time_utc": "2026-01-13T16:00:00Z",
+      "open": 95319.35,
+      "high": 95503.72,
+      "low": 95140.67,
+      "close": 95377.39,
+      "volume_simulado": 70.3
+    },
+    {
+      "time_utc": "2026-01-13T17:00:00Z",
+      "open": 95466.96,
+      "high": 95654.28,
+      "low": 95386.96,
+      "close": 95544.51,
+      "volume_simulado": 52.71
+    },
+    {
+      "time_utc": "2026-01-13T18:00:00Z",
+      "open": 95447.77,
+      "high": 95781.8,
+      "low": 95191.29,
+      "close": 95593.27,
+      "volume_simulado": 104.96
+    },
+    {
+      "time_utc": "2026-01-13T19:00:00Z",
+      "open": 95619.81,
+      "high": 96107.31,
+      "low": 95424.19,
+      "close": 95834.7,
+      "volume_simulado": 107.9
+    },
+    {
+      "time_utc": "2026-01-13T20:00:00Z",
+      "open": 95759.75,
+      "high": 96010.59,
+      "low": 95544.26,
+      "close": 95882.35,
+      "volume_simulado": 49.5
+    },
+    {
+      "time_utc": "2026-01-13T21:00:00Z",
+      "open": 95784.2,
+      "high": 96458.4,
+      "low": 95704.2,
+      "close": 96242.86,
+      "volume_simulado": 88.16
+    },
+    {
+      "time_utc": "2026-01-13T22:00:00Z",
+      "open": 96394.83,
+      "high": 96695.51,
+      "low": 96309.9,
+      "close": 96501.11,
+      "volume_simulado": 32.25
+    },
+    {
+      "time_utc": "2026-01-13T23:00:00Z",
+      "open": 96447.38,
+      "high": 96701.6,
+      "low": 96319.23,
+      "close": 96603.18,
+      "volume_simulado": 36.55
+    },
+    {
+      "time_utc": "2026-01-14T00:00:00Z",
+      "open": 96531.47,
+      "high": 97064.65,
+      "low": 96418.47,
+      "close": 96809.8,
+      "volume_simulado": 73.83
+    },
+    {
+      "time_utc": "2026-01-14T01:00:00Z",
+      "open": 96812.13,
+      "high": 97487.58,
+      "low": 96541.42,
+      "close": 97284.99,
+      "volume_simulado": 73.51
+    },
+    {
+      "time_utc": "2026-01-14T02:00:00Z",
+      "open": 97209.84,
+      "high": 97384.74,
+      "low": 96856.61,
+      "close": 97055.76,
+      "volume_simulado": 59.18
+    },
+    {
+      "time_utc": "2026-01-14T03:00:00Z",
+      "open": 97082.32,
+      "high": 97445.38,
+      "low": 96842.77,
+      "close": 97180.63,
+      "volume_simulado": 88.49
+    },
+    {
+      "time_utc": "2026-01-14T04:00:00Z",
+      "open": 97156.75,
+      "high": 97491.76,
+      "low": 96937.63,
+      "close": 97284.6,
+      "volume_simulado": 66.69
+    },
+    {
+      "time_utc": "2026-01-14T05:00:00Z",
+      "open": 97139.39,
+      "high": 97609.86,
+      "low": 96975.49,
+      "close": 97412.83,
+      "volume_simulado": 102.4
+    },
+    {
+      "time_utc": "2026-01-14T06:00:00Z",
+      "open": 97344.6,
+      "high": 97541.13,
+      "low": 97264.6,
+      "close": 97443.0,
+      "volume_simulado": 92.26
+    },
+    {
+      "time_utc": "2026-01-14T07:00:00Z",
+      "open": 97301.75,
+      "high": 97526.26,
+      "low": 97061.93,
+      "close": 97332.92,
+      "volume_simulado": 75.01
+    },
+    {
+      "time_utc": "2026-01-14T08:00:00Z",
+      "open": 97266.85,
+      "high": 97785.75,
+      "low": 97090.45,
+      "close": 97551.6,
+      "volume_simulado": 53.85
+    },
+    {
+      "time_utc": "2026-01-14T09:00:00Z",
+      "open": 97422.95,
+      "high": 97625.18,
+      "low": 97198.75,
+      "close": 97346.14,
+      "volume_simulado": 74.49
+    },
+    {
+      "time_utc": "2026-01-14T10:00:00Z",
+      "open": 97277.73,
+      "high": 97440.02,
+      "low": 97143.91,
+      "close": 97314.21,
+      "volume_simulado": 60.52
+    },
+    {
+      "time_utc": "2026-01-14T11:00:00Z",
+      "open": 97266.22,
+      "high": 97459.37,
+      "low": 97140.66,
+      "close": 97220.66,
+      "volume_simulado": 74.41
+    },
+    {
+      "time_utc": "2026-01-14T12:00:00Z",
+      "open": 97255.78,
+      "high": 97677.84,
+      "low": 97130.93,
+      "close": 97458.6,
+      "volume_simulado": 55.25
+    },
+    {
+      "time_utc": "2026-01-14T13:00:00Z",
+      "open": 97438.41,
+      "high": 97518.88,
+      "low": 96951.96,
+      "close": 97188.89,
+      "volume_simulado": 65.94
+    },
+    {
+      "time_utc": "2026-01-14T14:00:00Z",
+      "open": 97338.59,
+      "high": 97600.31,
+      "low": 96785.49,
+      "close": 96913.6,
+      "volume_simulado": 74.13
+    },
+    {
+      "time_utc": "2026-01-14T15:00:00Z",
+      "open": 97007.83,
+      "high": 97327.94,
+      "low": 96792.47,
+      "close": 97171.71,
+      "volume_simulado": 55.01
+    },
+    {
+      "time_utc": "2026-01-14T16:00:00Z",
+      "open": 97093.69,
+      "high": 97278.18,
+      "low": 96831.72,
+      "close": 97036.27,
+      "volume_simulado": 66.52
+    },
+    {
+      "time_utc": "2026-01-14T17:00:00Z",
+      "open": 96991.15,
+      "high": 97239.72,
+      "low": 96765.98,
+      "close": 97097.02,
+      "volume_simulado": 52.08
+    }
+  ]
+}
