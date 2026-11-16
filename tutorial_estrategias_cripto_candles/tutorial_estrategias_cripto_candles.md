@@ -20,7 +20,112 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 - **Ordens:** os sinais são posições didáticas no gráfico, e não backtests de regras executadas em tempo real. Em produção, os sinais devem ser calculados sem usar candles futuros, respeitando a abertura do próximo candle ou simulação realista de ordens.
 - **Limite de escopo:** arbitragem depende de dois livros de ofertas, pairs trading de um segundo ativo, ranking de vários ativos e market making de dados de livro; seus gráficos BTC/USDT não demonstram sozinhos a execução completa.
 
+## Como preencher os dados no candlelab-web
+
+As entradas abaixo correspondem ao catálogo implementado na versão **0.2.0**, conferido no código local em **16/11/2026**. São os padrões do simulador, sem otimização a partir dos gráficos. O catálogo retornado por `GET /api/v1/strategies` é a fonte dos campos, limites e padrões efetivos da versão em execução; a tela **Novo processamento** é montada a partir dele. As tabelas de cada estratégia informam o nome técnico da entrada, para facilitar a identificação mesmo quando o formulário exibir um rótulo em inglês.
+
+### Dados compartilhados pela sessão
+
+| Onde informar | Entrada | Como preencher |
+|---|---|---|
+| Aquisição/importação de candles | Série OHLCV, par e intervalo | Para os exemplos deste tutorial, BTCUSDT e 1h. Na importação, usar `data/<nome>-binance-klines.json`; os JSONs de sinais/metadados não são o dataset de candles. |
+| Nova sessão | Nome e conjunto de candles | Selecionar o dataset correspondente ao período que será analisado. |
+| Nova sessão | Caixa inicial (USDT) | Valor positivo; o formulário inicia em 1000 USDT. Cada processamento recomeça com esse caixa, sem consumir o resultado de outro. |
+| Nova sessão | Taxa por preenchimento (%) | O formulário inicia em 0,1%. Na API, `fee_rate` é uma fração decimal: `"0.001"` corresponde a 0,1%. |
+| Novo processamento | Estratégia | Selecionar o ID individual ou o ID da combinação indicado na seção correspondente. |
+| Novo processamento | Parâmetros e dados auxiliares | Conferir os padrões preenchidos, ajustar os campos e clicar em **Iniciar processamento**. O arquivo auxiliar pertence a esse processamento. |
+
+**Uma combinação é uma única opção do catálogo e um único processamento.** Por exemplo, selecionar `EMA_ADX_ATR@1` reúne os parâmetros da combinação; não é necessário criar três processamentos separados. Para comparar estratégias, criar um processamento para cada opção na mesma sessão. Trocar a estratégia no formulário restaura os padrões e limpa os valores editados, inclusive o auxiliar importado. As seis combinações deste tutorial possuem IDs próprios; o formulário não monta combinações arbitrárias de IDs.
+
+### Unidades e interpretação das entradas
+
+- **Janelas e períodos:** inteiros em candles, de 1 a 10000, inclusive. Em 1h, 24 candles correspondem a 24 horas; em 5m, a 2 horas. O processamento pode precisar de mais candles que a maior janela para completar o aquecimento e confirmar cruzamentos.
+- **Decimais:** nas tabelas e nos exemplos JSON, usar ponto decimal; na API, enviar os parâmetros decimais como strings e os inteiros como números. Os intervalos das tabelas são inclusivos. Não enviar parâmetros que não pertençam ao schema da estratégia.
+- **Percentuais:** `stop_pct="3"` significa 3%; `target_pct="0.5"` significa 0,5%. **Pontos-base (bps):** 1 bp = 0,01%; `max_spread_bps="10"` significa 0,10%.
+- **Frações:** `transfer_rate="0.001"` significa custo adicional de 0,1%; `borrow_rate_per_candle="0.00001"` significa 0,001% por candle. Probabilidade `"0.6"` significa 60%.
+- **Stop comum:** `stop_pct` compara o fechamento com o preço de entrada; a saída ocorre na abertura seguinte. Não é garantia de execução no preço do stop. Arbitragem e DCA não possuem esse campo.
+- **Execução:** em geral, decisões usam o fechamento e executam no candle seguinte. Ordens limitadas e cotações passivas seguem regras próprias. A posição final pode permanecer aberta; o simulador não reproduz necessariamente as vendas ilustradas nos gráficos.
+
+### Dados auxiliares por processamento
+
+As seis opções abaixo exigem **Importar dados auxiliares JSON** ou o preenchimento do campo **Dados auxiliares JSON** (`auxiliary_json`). As demais usam apenas os candles e seus parâmetros. O padrão `[]` é apenas o valor inicial do campo: não atende às estratégias que exigem observações.
+
+| Estratégia | Campos obrigatórios além de `open_time_ms` | Conteúdo e unidades |
+|---|---|---|
+| Scalping | `bid`, `ask`, `flow`, `capacity_base` | Melhor compra e venda em USDT; fluxo normalizado entre -1 e 1; capacidade executável em BTC, positiva. |
+| Arbitragem | `bid`, `ask`, `bid_b`, `ask_b`, `capacity_base` | Quotes dos mercados A e B; menor capacidade executável das duas pernas, em BTC. |
+| Market Making | `bid`, `ask`, `capacity_base`, `maker_buy_filled`, `maker_sell_filled` | Quotes e capacidade; flags booleanas de execução da ordem cotada no fechamento anterior, ao preço anterior. Sem flag verdadeira não há fill passivo. |
+| Pairs Trading | `eth_price`, `eth_close` | Abertura e fechamento ETH/USDT sincronizados com cada candle BTCUSDT. |
+| Machine Learning | `probability`, `trained_until_ms`, `model_id` | Probabilidade de 0 a 1; fim do treino anterior ao timestamp da observação; identificação não vazia do modelo/fonte. O motor consome previsões externas, sem treinar o modelo. |
+| Momentum + Ranking | `universe` | Mapa com BTCUSDT e pelo menos outro ativo; cada item possui `roc` em pontos percentuais e `liquidity` em USDT. Mesma janela de ROC e definição de liquidez para todos os ativos. |
+
+O arquivo é um **array JSON com uma observação para cada abertura do dataset**, ordenado por `open_time_ms`, sem duplicatas, lacunas ou timestamps extras. Timestamps são inteiros Unix em milissegundos UTC; valores decimais são strings, sem notação exponencial. Preços são positivos e `bid <= ask` em cada mercado. Limite do auxiliar: 8 MiB e 100000 observações. Campos desconhecidos são rejeitados.
+
+Quotes, fluxo, universo e probabilidades devem representar informações disponíveis na abertura indicada. Para pairs, `eth_close` só fica disponível no fechamento do intervalo. Pairs e ranking exigem dataset BTCUSDT. A validação de formato não comprova a origem nem a disponibilidade temporal dos dados.
+
+Exemplos de **uma observação por opção** (cada array deve ser expandido para cobrir todos os timestamps do dataset; os números abaixo são apenas ilustrativos):
+
+**Scalping:**
+
+```json
+[{"open_time_ms":1787097600000,"bid":"95000","ask":"95005","flow":"0.2","capacity_base":"0.01"}]
+```
+
+**Arbitragem:**
+
+```json
+[{"open_time_ms":1787097600000,"bid":"95000","ask":"95005","bid_b":"95300","ask_b":"95305","capacity_base":"0.01"}]
+```
+
+**Market Making:**
+
+```json
+[{"open_time_ms":1787097600000,"bid":"95000","ask":"95005","capacity_base":"0.01","maker_buy_filled":false,"maker_sell_filled":false}]
+```
+
+**Pairs Trading:**
+
+```json
+[{"open_time_ms":1787097600000,"eth_price":"3000","eth_close":"3010"}]
+```
+
+**Machine Learning:**
+
+```json
+[{"open_time_ms":1787097600000,"probability":"0.65","trained_until_ms":1787000000000,"model_id":"modelo-validado-versao-1"}]
+```
+
+**Momentum + Ranking:**
+
+```json
+[{"open_time_ms":1787097600000,"universe":{"BTCUSDT":{"roc":"2.5","liquidity":"10000000"},"ETHUSDT":{"roc":"1.2","liquidity":"8000000"}}}]
+```
+
+Na interface, importar o array diretamente. Na API, `parameters.auxiliary_json` é uma **string contendo esse array serializado**, não um array aninhado. Os arquivos `data/*-metadados.json` e os campos auxiliares dos klines Binance não substituem esse arquivo: não contêm livros de ofertas, ETH sincronizado, probabilidades ou universo de ranking.
+
+### Exemplo de parâmetros de uma combinação
+
+Ao selecionar **Trend Following + ADX + ATR**, os valores padrão equivalem ao seguinte corpo de criação de processamento em `POST /api/v1/sessions/{session_id}/runs`:
+
+```json
+{
+  "strategy_id": "EMA_ADX_ATR@1",
+  "parameters": {
+    "stop_pct": "3",
+    "short_window": 8,
+    "long_window": 21,
+    "atr_period": 14,
+    "atr_multiple": "2",
+    "adx_limit": "25"
+  }
+}
+```
+
+As tabelas seguintes detalham **todas as entradas editáveis** das 18 opções. Indicadores fixos são identificados nas notas de cada estratégia.
+
 ## Índice
+
+[Como preencher os dados no candlelab-web](#como-preencher-os-dados-no-candlelab-web) · [Dados auxiliares por processamento](#dados-auxiliares-por-processamento)
 
 | Nº | Estratégia | Tipo | Gráfico |
 |---:|---|---|---|
@@ -56,6 +161,16 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** EMA 8 e EMA 21.
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `TREND_FOLLOWING@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `short_window` | `8` | 1 a 10000 | Período da EMA curta, em candles; deve ser menor que `long_window`. |
+| `long_window` | `21` | 1 a 10000 | Período da EMA longa, em candles. |
+
 ### Regras didáticas de operação
 
 - **Compra:** A EMA(8) cruza acima da EMA(21) com fechamento acima de ambas; entrar no candle seguinte.
@@ -84,6 +199,17 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Alta com aceleração e boa liquidez.
 
 **Indicadores:** ROC(5), EMA(10).
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `MOMENTUM@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `roc_period` | `5` | 1 a 10000 | Janela do ROC percentual, em candles. |
+| `ema_period` | `10` | 1 a 10000 | Período da EMA, em candles. |
+| `volume_period` | `20` | 1 a 10000 | Janela da média de volume anterior; exclui o candle da decisão. |
 
 ### Regras didáticas de operação
 
@@ -114,6 +240,20 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** Bollinger(20,2), SMA(20).
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `MEAN_REVERSION@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `period` | `20` | 1 a 10000 | Janela da média e das bandas de Bollinger, em candles. |
+| `deviations` | `"2"` | 0.1 a 10 | Quantidade de desvios padrão populacionais das bandas. |
+| `adx_period` | `14` | 1 a 10000 | Período do ADX, em candles. |
+| `adx_limit` | `"25"` | 0 a 100 | ADX deve ser menor que este valor para permitir entrada. |
+
+**Particularidades do processamento:** O motor exige ADX abaixo de `adx_limit` e realiza na média das bandas.
+
 ### Regras didáticas de operação
 
 - **Compra:** Candle volta a fechar dentro da banda inferior e o regime não indica tendência forte.
@@ -142,6 +282,18 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Consolidação de preço.
 
 **Indicadores:** Faixa de preços, níveis da grade.
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `GRID_TRADING@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `lookback` | `20` | 1 a 10000 | Janela anterior usada para extremos de preço; exclui o candle da decisão. |
+| `levels` | `5` | 1 a 10000 | Divisor da faixa para espaçamento e do caixa inicial para orçamento por lote; não cria ordens simultâneas. |
+
+**Particularidades do processamento:** A faixa é congelada nos extremos da primeira janela pronta. O simulador mantém um lote e uma ordem por candle; não recebe preços mínimo/máximo manuais.
 
 ### Regras didáticas de operação
 
@@ -172,6 +324,18 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** Resistência, ATR(14).
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `BREAKOUT@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `lookback` | `20` | 1 a 10000 | Janela anterior usada para extremos de preço; exclui o candle da decisão. |
+| `atr_period` | `14` | 1 a 10000 | Período do ATR, em candles. |
+| `atr_multiple` | `"2"` | 0.1 a 20 | Multiplicador do ATR para o trailing stop. |
+| `min_atr_pct` | `"0.1"` | 0 a 100 | ATR mínimo como percentual do fechamento: `ATR / fechamento × 100`. |
+
 ### Regras didáticas de operação
 
 - **Compra:** Fechamento acima da máxima da janela anterior e filtro de volatilidade.
@@ -200,6 +364,18 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Oscilações de vários candles ou dias.
 
 **Indicadores:** SMA(20), suportes e resistências.
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `SWING_TRADING@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `lookback` | `20` | 1 a 10000 | Janela anterior usada para extremos de preço; exclui o candle da decisão. |
+| `min_reward_risk` | `"2"` | 0.1 a 20 | Relação mínima entre ganho potencial até a resistência e distância ao suporte. |
+
+**Particularidades do processamento:** A SMA(20) e a tolerância de proximidade ao suporte (1%) são fixas no motor atual; não são campos do formulário.
 
 ### Regras didáticas de operação
 
@@ -230,6 +406,20 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** VWAP, spread e volume.
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `SCALPING@1`. Exige `auxiliary_json` com os campos descritos em [Dados auxiliares por processamento](#dados-auxiliares-por-processamento).
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `auxiliary_json` | `"[]"` | String JSON; até 8 MiB | Array de observações serializado; preencher conforme a seção de dados auxiliares. |
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `max_spread_bps` | `"10"` | 0 a 1000 | Spread máximo em bps: `(ask / bid - 1) × 10000`. |
+| `target_pct` | `"0.5"` | 0.01 a 100 | Alvo de ganho percentual sobre a entrada. |
+| `max_hold` | `3` | 1 a 10000 | Limite de permanência em candles com posição aberta. |
+
+**Particularidades do processamento:** VWAP diária com reinício em UTC e exigência de fluxo positivo são fixas; OHLCV isolado não basta para executar esta opção.
+
 ### Regras didáticas de operação
 
 - **Compra:** Recuperação da VWAP com spread estreito e fluxo favorável.
@@ -258,6 +448,18 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Diferença líquida positiva entre plataformas.
 
 **Indicadores:** Preço de execução em dois mercados.
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `ARBITRAGE@1`. Exige `auxiliary_json` com os campos descritos em [Dados auxiliares por processamento](#dados-auxiliares-por-processamento).
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `auxiliary_json` | `"[]"` | String JSON; até 8 MiB | Array de observações serializado; preencher conforme a seção de dados auxiliares. |
+| `min_edge_bps` | `"1"` | 0 a 1000 | Margem líquida mínima em bps, após taxas e custo adicional. |
+| `transfer_rate` | `"0"` | 0 a 0.5 | Custo adicional como fração do valor comprado; não executa transferências reais. |
+
+**Particularidades do processamento:** Não possui `stop_pct`. O simulador revalida a margem na abertura seguinte e supõe as duas pernas atômicas, com contas pré-financiadas.
 
 ### Regras didáticas de operação
 
@@ -290,6 +492,17 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** Preço médio ponderado.
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `DCA@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `every_candles` | `24` | 1 a 10000 | Intervalo entre decisões de compra agendadas, em candles. |
+| `start_index` | `1` | 1 a 10000 | Contagem do fechamento inicial: 1 decide no primeiro fechamento e tenta comprar na segunda abertura. |
+
+**Particularidades do processamento:** São três parcelas fixas de caixa inicial/3, incluindo a taxa; quantidade de parcelas não é editável. `every_candles=24` equivale a compras diárias somente em 1h. Não força venda.
+
 ### Regras didáticas de operação
 
 - **Compra:** Três compras em momentos predefinidos, com montantes iguais em USDT.
@@ -319,6 +532,17 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** Bid/Ask e spread.
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `MARKET_MAKING@1`. Exige `auxiliary_json` com os campos descritos em [Dados auxiliares por processamento](#dados-auxiliares-por-processamento).
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `auxiliary_json` | `"[]"` | String JSON; até 8 MiB | Array de observações serializado; preencher conforme a seção de dados auxiliares. |
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+
+**Particularidades do processamento:** Não há campo editável para spread-alvo: o simulador cota nos bid/ask auxiliares e usa flags externas para confirmar fills.
+
 ### Regras didáticas de operação
 
 - **Compra:** Ordem passiva de compra no bid, sujeita a fila e execução.
@@ -347,6 +571,21 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Relação relativa estável.
 
 **Indicadores:** Z-score da razão BTC/USDT vs ETH/USDT.
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `PAIRS_TRADING@1`. Exige `auxiliary_json` com os campos descritos em [Dados auxiliares por processamento](#dados-auxiliares-por-processamento).
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `auxiliary_json` | `"[]"` | String JSON; até 8 MiB | Array de observações serializado; preencher conforme a seção de dados auxiliares. |
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `period` | `20` | 1 a 10000 | Janela do z-score da razão BTC/ETH, em candles. |
+| `entry_z` | `"2"` | 0.1 a 10 | Magnitude do z-score negativo de entrada; compra BTC relativamente barato. |
+| `stop_z` | `"4"` | 0.2 a 20 | Magnitude limite do desvio negativo para encerrar o par. |
+| `borrow_rate_per_candle` | `"0.00001"` | 0 a 0.1 | Custo de empréstimo de ETH por candle como fração do valor da dívida. |
+
+**Particularidades do processamento:** `period` mede a janela do z-score da razão entre fechamentos BTC/ETH. A normalização de saída é fixa em z-score ≥ 0; a simulação inclui a perna vendida em ETH e seu empréstimo, diferentemente do gráfico didático isolado de BTC.
 
 ### Regras didáticas de operação
 
@@ -379,6 +618,19 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** Probabilidade calibrada e filtros.
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `MACHINE_LEARNING@1`. Exige `auxiliary_json` com os campos descritos em [Dados auxiliares por processamento](#dados-auxiliares-por-processamento).
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `auxiliary_json` | `"[]"` | String JSON; até 8 MiB | Array de observações serializado; preencher conforme a seção de dados auxiliares. |
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `buy_probability` | `"0.6"` | 0 a 1 | Compra quando a probabilidade externa fica acima deste limiar. |
+| `sell_probability` | `"0.5"` | 0 a 1 | Vende quando a probabilidade externa fica abaixo deste limiar. |
+
+**Particularidades do processamento:** Não há entradas de treino ou arquitetura no formulário: modelo, treino e calibração são externos. Os limiares são comparações estritas.
+
 ### Regras didáticas de operação
 
 - **Compra:** Comprar quando probabilidade prevista ultrapassar limiar calibrado e passar nos filtros.
@@ -407,6 +659,21 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Alta direcional.
 
 **Indicadores:** EMA 8/21, ADX(14), ATR(14).
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `EMA_ADX_ATR@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `short_window` | `8` | 1 a 10000 | Período da EMA curta, em candles; deve ser menor que `long_window`. |
+| `long_window` | `21` | 1 a 10000 | Período da EMA longa, em candles. |
+| `atr_period` | `14` | 1 a 10000 | Período do ATR, em candles. |
+| `atr_multiple` | `"2"` | 0.1 a 20 | Multiplicador do ATR para o trailing stop. |
+| `adx_limit` | `"25"` | 0 a 100 | ADX deve ser maior que este valor para permitir entrada. |
+
+**Particularidades do processamento:** O ADX deve superar `adx_limit`; seu período usa `atr_period` no motor atual, sem campo `adx_period` separado. A entrada exige EMA curta acima da longa e candle de alta, sem exigir novo cruzamento.
 
 ### Regras didáticas de operação
 
@@ -437,6 +704,20 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** RSI(14), Bollinger(20,2).
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `RSI_BOLLINGER@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `period` | `20` | 1 a 10000 | Janela da média e das bandas de Bollinger, em candles. |
+| `deviations` | `"2"` | 0.1 a 10 | Quantidade de desvios padrão populacionais das bandas. |
+| `rsi_period` | `14` | 1 a 10000 | Período do RSI, em candles. |
+| `recovery` | `"30"` | 1 a 99 | Nível que o RSI deve cruzar para cima no candle de retorno à banda. |
+
+**Particularidades do processamento:** O cruzamento de recuperação do RSI e o retorno à banda inferior devem ocorrer no mesmo candle. A saída é na média das bandas.
+
 ### Regras didáticas de operação
 
 - **Compra:** RSI cruza acima do nível de recuperação e preço volta ao interior da banda inferior.
@@ -465,6 +746,22 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Expansão com participação.
 
 **Indicadores:** Resistência, volume relativo, ATR(14).
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `BREAKOUT_VOLUME_ATR@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `lookback` | `20` | 1 a 10000 | Janela anterior usada para extremos de preço; exclui o candle da decisão. |
+| `atr_period` | `14` | 1 a 10000 | Período do ATR, em candles. |
+| `atr_multiple` | `"2"` | 0.1 a 20 | Multiplicador do ATR para o trailing stop. |
+| `min_atr_pct` | `"0.1"` | 0 a 100 | ATR mínimo como percentual do fechamento: `ATR / fechamento × 100`. |
+| `volume_period` | `20` | 1 a 10000 | Janela da média de volume anterior; exclui o candle da decisão. |
+| `volume_multiple` | `"1"` | 0.1 a 100 | Volume atual deve superar a média anterior multiplicada por este valor. |
+
+**Particularidades do processamento:** A resistência e a média de volume excluem o candle da decisão.
 
 ### Regras didáticas de operação
 
@@ -495,6 +792,20 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** MACD(12,26,9), EMA(21), RSI(14).
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `MACD_EMA_RSI@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `ema_period` | `21` | 1 a 10000 | Período da EMA, em candles. |
+| `rsi_period` | `14` | 1 a 10000 | Período do RSI, em candles. |
+| `rsi_min` | `"40"` | 0 a 100 | Limite inferior do RSI para entrada; deve ser menor que `rsi_max`. |
+| `rsi_max` | `"70"` | 0 a 100 | Limite superior do RSI para entrada. |
+
+**Particularidades do processamento:** MACD(12,26,9) é fixo; seus três períodos não são campos editáveis. EMA e RSI usam os períodos da tabela.
+
 ### Regras didáticas de operação
 
 - **Compra:** Fechamento acima EMA(21), MACD cruza sinal e RSI dentro da faixa definida.
@@ -524,6 +835,21 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Indicadores:** Níveis grid, ADX(14), ATR(14).
 
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `GRID_ADX_ATR@1`. Não exige arquivo auxiliar; utiliza o OHLCV da sessão.
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `lookback` | `20` | 1 a 10000 | Janela anterior usada para extremos de preço; exclui o candle da decisão. |
+| `levels` | `5` | 1 a 10000 | Divisor da faixa para espaçamento e do caixa inicial para orçamento por lote; não cria ordens simultâneas. |
+| `atr_period` | `14` | 1 a 10000 | Período do ATR, em candles. |
+| `adx_limit` | `"20"` | 0 a 100 | ADX deve ser menor que este valor para permitir entrada. |
+| `atr_multiple` | `"1"` | 0.1 a 20 | Multiplicador do ATR para o espaçamento congelado da grade. |
+
+**Particularidades do processamento:** ADX deve ficar abaixo de `adx_limit`; seu período usa `atr_period`. O espaçamento é congelado em ATR × `atr_multiple`, em vez de faixa/níveis. `levels` continua definindo o orçamento por lote. Rompimento ou ADX forte desliga a grade definitivamente.
+
 ### Regras didáticas de operação
 
 - **Compra:** ADX abaixo do limite validado e compra em nível inferior da grade.
@@ -552,6 +878,23 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 **Quando utilizar:** Rotação entre ativos.
 
 **Indicadores:** ROC, liquidez e ranking.
+
+### Parâmetros de entrada no candlelab-web
+
+**Estratégia no catálogo:** `MOMENTUM_RANKING@1`. Exige `auxiliary_json` com os campos descritos em [Dados auxiliares por processamento](#dados-auxiliares-por-processamento).
+
+| Parâmetro | Padrão | Limites / formato | Significado |
+|---|---|---|---|
+| `auxiliary_json` | `"[]"` | String JSON; até 8 MiB | Array de observações serializado; preencher conforme a seção de dados auxiliares. |
+| `stop_pct` | `"3"` | 0.01 a 100 | Perda percentual em relação à entrada, observada no fechamento. |
+| `roc_period` | `5` | 1 a 10000 | Janela do ROC percentual, em candles. |
+| `ema_period` | `10` | 1 a 10000 | Período da EMA, em candles. |
+| `volume_period` | `20` | 1 a 10000 | Janela da média de volume anterior; exclui o candle da decisão. |
+| `top_n` | `3` | 1 a 10000 | Quantidade de posições elegíveis no ranking de ROC decrescente. |
+| `min_liquidity` | `"1000000"` | 0 a 1000000000000 | Liquidez mínima em USDT para participar do ranking. |
+| `min_roc` | `"0"` | -100 a 1000000 | ROC do BTC no universo deve superar este percentual. |
+
+**Particularidades do processamento:** O ranking usa o ROC importado no universo; o sinal de momentum usa o ROC calculado dos candles BTC. As janelas devem ser consistentes. Empates no ranking são resolvidos por símbolo.
 
 ### Regras didáticas de operação
 
