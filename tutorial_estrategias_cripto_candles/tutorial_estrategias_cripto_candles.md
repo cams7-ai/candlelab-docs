@@ -4,7 +4,9 @@
 
 ## Objetivo e como ler este documento
 
-Este guia documenta **12 estratégias individuais** e **6 combinações**, com gráficos PNG de candles BTC/USDT no intervalo de **1 hora**, indicadores visuais, marcadores **COMPRA** e **VENDA**, regras e riscos. Cada gráfico possui um JSON correspondente com OHLCV sintético e sinais para leitura numérica por IA.
+Este guia documenta **12 estratégias individuais** e **6 combinações**, com gráficos PNG de candles BTC/USDT no intervalo de **1 hora**, indicadores visuais, marcadores **COMPRA** e **VENDA**, regras e riscos. Cada gráfico possui um JSON correspondente com OHLCV sintético e sinais para leitura numérica por IA. Também há uma versão dos candles no formato matricial de 12 posições inspirado no endpoint `GET /api/v3/klines` da Binance; valores não disponíveis não são inventados.
+
+> **ATENÇÃO À PROVENIÊNCIA:** o JSON real BTC/USDT de 1 minuto fornecido como referência foi utilizado exclusivamente para identificar o formato; os gráficos atuais são de dados sintéticos em 1 hora. Os valores dos gráficos NÃO são os mesmos do arquivo real.
 
 > **Para agentes de IA:** o texto Markdown é autossuficiente para interpretar a lógica; a imagem é evidência visual didática; o JSON contém os preços exatos. Uma referência `![...](images/...)` não garante, por si só, que o agente tenha aberto a imagem. Para verificar os números, leia `data/<nome>.json`.
 
@@ -68,7 +70,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Em congestão há muitos cruzamentos falsos.
 
-**Dados para leitura por IA:** [`data/trend-following.json`](data/trend-following.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/trend-following.json`](data/trend-following.json) · [Candles no formato Binance](data/trend-following-binance-klines.json) · [Sinais e metadados](data/trend-following-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -97,7 +99,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Compras tardias após movimentos esticados podem sofrer reversão.
 
-**Dados para leitura por IA:** [`data/momentum.json`](data/momentum.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/momentum.json`](data/momentum.json) · [Candles no formato Binance](data/momentum-binance-klines.json) · [Sinais e metadados](data/momentum-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -126,7 +128,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Em tendência forte de baixa, o ativo pode continuar caindo.
 
-**Dados para leitura por IA:** [`data/mean-reversion.json`](data/mean-reversion.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/mean-reversion.json`](data/mean-reversion.json) · [Candles no formato Binance](data/mean-reversion-binance-klines.json) · [Sinais e metadados](data/mean-reversion-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -155,7 +157,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Queda persistente deixa posição acumulada; taxas e ordens não executadas reduzem o retorno.
 
-**Dados para leitura por IA:** [`data/grid-trading.json`](data/grid-trading.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/grid-trading.json`](data/grid-trading.json) · [Candles no formato Binance](data/grid-trading-binance-klines.json) · [Sinais e metadados](data/grid-trading-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -184,7 +186,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Rompimentos falsos e slippage em movimentos rápidos.
 
-**Dados para leitura por IA:** [`data/breakout.json`](data/breakout.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/breakout.json`](data/breakout.json) · [Candles no formato Binance](data/breakout-binance-klines.json) · [Sinais e metadados](data/breakout-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -213,7 +215,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Gaps, quedas durante a posição e exposição prolongada.
 
-**Dados para leitura por IA:** [`data/swing-trading.json`](data/swing-trading.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/swing-trading.json`](data/swing-trading.json) · [Candles no formato Binance](data/swing-trading-binance-klines.json) · [Sinais e metadados](data/swing-trading-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -242,7 +244,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Custos e latência podem superar o ganho; gráfico OHLC não demonstra execuções reais.
 
-**Dados para leitura por IA:** [`data/scalping.json`](data/scalping.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/scalping.json`](data/scalping.json) · [Candles no formato Binance](data/scalping-binance-klines.json) · [Sinais e metadados](data/scalping-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -271,7 +273,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Execução de apenas uma ponta, liquidez e transferências; gráfico único é apenas ilustração.
 
-**Dados para leitura por IA:** [`data/arbitragem.json`](data/arbitragem.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/arbitragem.json`](data/arbitragem.json) · [Candles no formato Binance](data/arbitragem-binance-klines.json) · [Sinais e metadados](data/arbitragem-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 **Nota específica:** o resultado usa diferença artificial entre Mercado A e Mercado B no mesmo instante. Não interpretar o intervalo entre marcadores como uma operação temporal.
 
@@ -302,7 +304,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** DCA não elimina riscos de queda; escolha retrospectiva da saída favorece o exemplo.
 
-**Dados para leitura por IA:** [`data/dca.json`](data/dca.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/dca.json`](data/dca.json) · [Candles no formato Binance](data/dca-binance-klines.json) · [Sinais e metadados](data/dca-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -331,7 +333,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Seleção adversa e risco de inventário; candles não representam microestrutura.
 
-**Dados para leitura por IA:** [`data/market-making.json`](data/market-making.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/market-making.json`](data/market-making.json) · [Candles no formato Binance](data/market-making-binance-klines.json) · [Sinais e metadados](data/market-making-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -360,7 +362,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Relação estatística pode quebrar; gráfico BTC isolado não prova retorno do par.
 
-**Dados para leitura por IA:** [`data/pairs-trading.json`](data/pairs-trading.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/pairs-trading.json`](data/pairs-trading.json) · [Candles no formato Binance](data/pairs-trading-binance-klines.json) · [Sinais e metadados](data/pairs-trading-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 **Nota específica:** a posição relativa em ETH/USDT não está simulada no JSON; o resultado é o movimento isolado da perna BTC/USDT, não o P&L de uma carteira long/short.
 
@@ -391,7 +393,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Overfitting, vazamento temporal e mudança de regime; probabilidades no exemplo são didáticas.
 
-**Dados para leitura por IA:** [`data/machine-learning.json`](data/machine-learning.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/machine-learning.json`](data/machine-learning.json) · [Candles no formato Binance](data/machine-learning-binance-klines.json) · [Sinais e metadados](data/machine-learning-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -420,7 +422,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Limiar fixo e atraso podem falhar na transição de regimes.
 
-**Dados para leitura por IA:** [`data/ema-adx-atr.json`](data/ema-adx-atr.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/ema-adx-atr.json`](data/ema-adx-atr.json) · [Candles no formato Binance](data/ema-adx-atr-binance-klines.json) · [Sinais e metadados](data/ema-adx-atr-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -449,7 +451,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Sobrevenda não garante reversão.
 
-**Dados para leitura por IA:** [`data/rsi-bollinger.json`](data/rsi-bollinger.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/rsi-bollinger.json`](data/rsi-bollinger.json) · [Candles no formato Binance](data/rsi-bollinger-binance-klines.json) · [Sinais e metadados](data/rsi-bollinger-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -478,7 +480,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Volume pode aumentar em rompimentos falsos.
 
-**Dados para leitura por IA:** [`data/breakout-volume-atr.json`](data/breakout-volume-atr.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/breakout-volume-atr.json`](data/breakout-volume-atr.json) · [Candles no formato Binance](data/breakout-volume-atr-binance-klines.json) · [Sinais e metadados](data/breakout-volume-atr-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -507,7 +509,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Indicadores derivados do mesmo preço não são confirmações independentes.
 
-**Dados para leitura por IA:** [`data/macd-ema-rsi.json`](data/macd-ema-rsi.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/macd-ema-rsi.json`](data/macd-ema-rsi.json) · [Candles no formato Binance](data/macd-ema-rsi-binance-klines.json) · [Sinais e metadados](data/macd-ema-rsi-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -536,7 +538,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** ADX atrasado pode manter grade ativada durante início de tendência.
 
-**Dados para leitura por IA:** [`data/grid-adx-atr.json`](data/grid-adx-atr.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/grid-adx-atr.json`](data/grid-adx-atr.json) · [Candles no formato Binance](data/grid-adx-atr-binance-klines.json) · [Sinais e metadados](data/grid-adx-atr-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 ---
 
@@ -565,7 +567,7 @@ Este guia documenta **12 estratégias individuais** e **6 combinações**, com g
 
 **Riscos e limitações:** Um único gráfico BTC não demonstra ranking; é preciso consultar os demais pares.
 
-**Dados para leitura por IA:** [`data/momentum-ranking.json`](data/momentum-ranking.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
+**Dados para leitura por IA:** [`data/momentum-ranking.json`](data/momentum-ranking.json) · [Candles no formato Binance](data/momentum-ranking-binance-klines.json) · [Sinais e metadados](data/momentum-ranking-metadados.json) — contém candles OHLCV, timestamps UTC, entradas, saída, preços e retorno.
 
 **Nota específica:** o ranking entre pares não é calculado com uma única série BTC/USDT; o gráfico demonstra somente a perna BTC.
 

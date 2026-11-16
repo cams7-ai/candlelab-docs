@@ -1,0 +1,132 @@
+{
+  "aviso": "Todos os valores dos graficos sao sinteticos, nao originados do anexo real.",
+  "referencia_formato": "candles-btcusdt-spot-1m_2026-11-13T1300Z_a_2026-11-13T1800Z.json",
+  "estrategias": [
+    {
+      "estrategia": "Arbitragem",
+      "id": "arbitragem",
+      "candles": "data/arbitragem-binance-klines.json",
+      "sinais": "data/arbitragem-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Breakout + Volume + ATR",
+      "id": "breakout-volume-atr",
+      "candles": "data/breakout-volume-atr-binance-klines.json",
+      "sinais": "data/breakout-volume-atr-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Breakout",
+      "id": "breakout",
+      "candles": "data/breakout-binance-klines.json",
+      "sinais": "data/breakout-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "DCA — compras periódicas",
+      "id": "dca",
+      "candles": "data/dca-binance-klines.json",
+      "sinais": "data/dca-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Trend Following + ADX + ATR",
+      "id": "ema-adx-atr",
+      "candles": "data/ema-adx-atr-binance-klines.json",
+      "sinais": "data/ema-adx-atr-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Grid + ADX + ATR",
+      "id": "grid-adx-atr",
+      "candles": "data/grid-adx-atr-binance-klines.json",
+      "sinais": "data/grid-adx-atr-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Grid Trading",
+      "id": "grid-trading",
+      "candles": "data/grid-trading-binance-klines.json",
+      "sinais": "data/grid-trading-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "MACD + EMA + RSI",
+      "id": "macd-ema-rsi",
+      "candles": "data/macd-ema-rsi-binance-klines.json",
+      "sinais": "data/macd-ema-rsi-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Machine Learning",
+      "id": "machine-learning",
+      "candles": "data/machine-learning-binance-klines.json",
+      "sinais": "data/machine-learning-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Market Making",
+      "id": "market-making",
+      "candles": "data/market-making-binance-klines.json",
+      "sinais": "data/market-making-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Mean Reversion",
+      "id": "mean-reversion",
+      "candles": "data/mean-reversion-binance-klines.json",
+      "sinais": "data/mean-reversion-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Momentum + Ranking de moedas",
+      "id": "momentum-ranking",
+      "candles": "data/momentum-ranking-binance-klines.json",
+      "sinais": "data/momentum-ranking-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Momentum",
+      "id": "momentum",
+      "candles": "data/momentum-binance-klines.json",
+      "sinais": "data/momentum-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Pairs Trading",
+      "id": "pairs-trading",
+      "candles": "data/pairs-trading-binance-klines.json",
+      "sinais": "data/pairs-trading-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "RSI + Bollinger Bands",
+      "id": "rsi-bollinger",
+      "candles": "data/rsi-bollinger-binance-klines.json",
+      "sinais": "data/rsi-bollinger-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Scalping",
+      "id": "scalping",
+      "candles": "data/scalping-binance-klines.json",
+      "sinais": "data/scalping-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Swing Trading",
+      "id": "swing-trading",
+      "candles": "data/swing-trading-binance-klines.json",
+      "sinais": "data/swing-trading-metadados.json",
+      "quantidade_candles": 66
+    },
+    {
+      "estrategia": "Trend Following",
+      "id": "trend-following",
+      "candles": "data/trend-following-binance-klines.json",
+      "sinais": "data/trend-following-metadados.json",
+      "quantidade_candles": 66
+    }
+  ]
+}

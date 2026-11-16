@@ -1,0 +1,35 @@
+{
+  "par": "BTCUSDT",
+  "intervalo": "1h",
+  "timezone": "UTC",
+  "natureza": "sintetico",
+  "origem": "Dados sinteticos exatos usados nas imagens do tutorial; NAO extraidos do JSON de mercado enviado pelo usuario",
+  "modelo_formato": "Binance /api/v3/klines (array 12 posicoes)",
+  "campos_indisponiveis": {
+    "indice_7": "quote_asset_volume",
+    "indice_8": "number_of_trades",
+    "indice_9": "taker_buy_base_asset_volume",
+    "indice_10": "taker_buy_quote_asset_volume"
+  },
+  "convencao": "Campos indisponiveis sao null; isso nao e uma resposta real da Binance. Volume em indice 5 e simulado.",
+  "arquivo_candles": "mean-reversion-binance-klines.json",
+  "grafico": "../images/mean-reversion.png",
+  "estrategia": "Mean Reversion",
+  "indicadores": "Bollinger(20,2), SMA(20)",
+  "sinais": [
+    {
+      "tipo": "COMPRA",
+      "time_utc": "2026-01-12T22:00:00Z",
+      "preco_usdt": 95109.0
+    },
+    {
+      "tipo": "VENDA",
+      "time_utc": "2026-01-14T10:00:00Z",
+      "preco_usdt": 97635.83
+    }
+  ],
+  "retorno_liquido_hipotetico_percentual": 2.4517,
+  "taxa_compra": 0.001,
+  "taxa_venda": 0.001,
+  "aviso": "DADOS SINTÉTICOS. Entradas e saídas selecionadas para produzir exemplo lucrativo. Não constitui backtest nem execução real."
+}
