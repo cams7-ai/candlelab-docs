@@ -5,13 +5,7 @@
   "natureza": "sintetico",
   "origem": "Dados sinteticos exatos usados nas imagens do tutorial; NAO extraidos do JSON de mercado enviado pelo usuario",
   "modelo_formato": "Binance /api/v3/klines (array 12 posicoes)",
-  "campos_indisponiveis": {
-    "indice_7": "quote_asset_volume",
-    "indice_8": "number_of_trades",
-    "indice_9": "taker_buy_base_asset_volume",
-    "indice_10": "taker_buy_quote_asset_volume"
-  },
-  "convencao": "Campos indisponiveis sao null; isso nao e uma resposta real da Binance. Volume em indice 5 e simulado.",
+  "convencao": "Todos os campos sao sinteticos; estrutura de 12 posicoes inspirada na Binance, sem representar resposta real da API. Volume no indice 5 preservado.",
   "arquivo_candles": "rsi-bollinger-binance-klines.json",
   "grafico": "../images/rsi-bollinger.png",
   "estrategia": "RSI + Bollinger Bands",
@@ -31,5 +25,23 @@
   "retorno_liquido_hipotetico_percentual": 2.7127,
   "taxa_compra": 0.001,
   "taxa_venda": 0.001,
-  "aviso": "DADOS SINTÉTICOS. Entradas e saídas selecionadas para produzir exemplo lucrativo. Não constitui backtest nem execução real."
+  "aviso": "DADOS SINTÉTICOS. Entradas e saídas selecionadas para produzir exemplo lucrativo. Não constitui backtest nem execução real.",
+  "simulacao_campos_auxiliares": {
+    "versao": 1,
+    "indices": [
+      7,
+      8,
+      9,
+      10
+    ],
+    "preco_medio_estimado": "(open + high + low + close) / 4; nao e VWAP observado",
+    "indice_7": "volume_base * preco_medio_estimado",
+    "indice_8": "max(1, arredondar(volume_base / tamanho_medio_simulado)); tamanho medio entre 0.0001 e 0.0005 BTC por negocio",
+    "indice_9": "volume_base * fracao_taker_simulada; fracao entre 0.35 e 0.65",
+    "indice_10": "volume_taker_base_arredondado * preco_medio_estimado",
+    "determinismo": "SHA-256 do JSON compacto das posicoes 0 a 6; bytes 0:4 para tamanho medio e 4:8 para fracao taker, interpretados como inteiros big-endian",
+    "arredondamento": "Volumes com 8 casas decimais e ROUND_HALF_UP; numero de negocios inteiro",
+    "script": "../simular_campos_klines.py",
+    "limitacoes": "Hipoteses didaticas sem calibracao empirica; nao reconstruem negocios, fluxo agressor ou liquidez reais. Mesmo preco medio assumido para compras e vendas taker."
+  }
 }

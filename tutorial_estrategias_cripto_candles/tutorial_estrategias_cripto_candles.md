@@ -4,7 +4,7 @@
 
 ## Objetivo e como ler este documento
 
-Este guia documenta **12 estratégias individuais** e **6 combinações**, com gráficos PNG de candles BTC/USDT no intervalo de **1 hora**, indicadores visuais, marcadores **COMPRA** e **VENDA**, regras e riscos. Cada gráfico possui um JSON correspondente com OHLCV sintético e sinais para leitura numérica por IA. Também há uma versão dos candles no formato matricial de 12 posições inspirado no endpoint `GET /api/v3/klines` da Binance; valores não disponíveis não são inventados.
+Este guia documenta **12 estratégias individuais** e **6 combinações**, com gráficos PNG de candles BTC/USDT no intervalo de **1 hora**, indicadores visuais, marcadores **COMPRA** e **VENDA**, regras e riscos. Cada gráfico possui um JSON correspondente com OHLCV sintético e sinais para leitura numérica por IA. Também há uma versão dos candles no formato matricial de 12 posições inspirado no endpoint `GET /api/v3/klines` da Binance; os campos auxiliares de volume em USDT, número de trades e compras taker são simulados de forma determinística, com hipóteses descritas no [LEIA-ME](LEIA-ME.md) e nos metadados. Esses valores não representam negócios reais.
 
 > **ATENÇÃO À PROVENIÊNCIA:** o JSON real BTC/USDT de 1 minuto fornecido como referência foi utilizado exclusivamente para identificar o formato; os gráficos atuais são de dados sintéticos em 1 hora. Os valores dos gráficos NÃO são os mesmos do arquivo real.
 
