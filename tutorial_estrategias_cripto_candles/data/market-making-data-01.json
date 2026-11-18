@@ -1,0 +1,530 @@
+[
+  {
+    "open_time_ms": 1768176000000,
+    "bid": "95330.99",
+    "ask": "95335.99",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768179600000,
+    "bid": "95394.59",
+    "ask": "95399.59",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768183200000,
+    "bid": "95819.53",
+    "ask": "95824.53",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768186800000,
+    "bid": "96276.28",
+    "ask": "96281.28",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768190400000,
+    "bid": "96384.15",
+    "ask": "96389.15",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768194000000,
+    "bid": "96793.88",
+    "ask": "96798.88",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768197600000,
+    "bid": "96894.34",
+    "ask": "96899.34",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768201200000,
+    "bid": "96777.76",
+    "ask": "96782.76",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768204800000,
+    "bid": "97025.50",
+    "ask": "97030.50",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768208400000,
+    "bid": "96633.98",
+    "ask": "96638.98",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768212000000,
+    "bid": "96406.93",
+    "ask": "96411.93",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768215600000,
+    "bid": "96576.26",
+    "ask": "96581.26",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768219200000,
+    "bid": "96095.13",
+    "ask": "96100.13",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768222800000,
+    "bid": "96320.88",
+    "ask": "96325.88",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768226400000,
+    "bid": "96231.86",
+    "ask": "96236.86",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768230000000,
+    "bid": "95999.05",
+    "ask": "96004.05",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768233600000,
+    "bid": "96004.48",
+    "ask": "96009.48",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768237200000,
+    "bid": "95962.55",
+    "ask": "95967.55",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768240800000,
+    "bid": "95210.02",
+    "ask": "95215.02",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768244400000,
+    "bid": "94892.80",
+    "ask": "94897.80",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768248000000,
+    "bid": "94885.61",
+    "ask": "94890.61",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768251600000,
+    "bid": "94316.27",
+    "ask": "94321.27",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768255200000,
+    "bid": "94270.54",
+    "ask": "94275.54",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768258800000,
+    "bid": "94316.83",
+    "ask": "94321.83",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768262400000,
+    "bid": "93930.69",
+    "ask": "93935.69",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768266000000,
+    "bid": "93679.41",
+    "ask": "93684.41",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768269600000,
+    "bid": "93879.53",
+    "ask": "93884.53",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768273200000,
+    "bid": "93952.41",
+    "ask": "93957.41",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768276800000,
+    "bid": "94043.59",
+    "ask": "94048.59",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768280400000,
+    "bid": "94349.31",
+    "ask": "94354.31",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768284000000,
+    "bid": "94467.77",
+    "ask": "94472.77",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768287600000,
+    "bid": "95224.14",
+    "ask": "95229.14",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768291200000,
+    "bid": "95746.83",
+    "ask": "95751.83",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768294800000,
+    "bid": "95781.85",
+    "ask": "95786.85",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768298400000,
+    "bid": "96135.75",
+    "ask": "96140.75",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768302000000,
+    "bid": "95860.03",
+    "ask": "95865.03",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768305600000,
+    "bid": "96332.93",
+    "ask": "96337.93",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768309200000,
+    "bid": "96063.85",
+    "ask": "96068.85",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768312800000,
+    "bid": "96683.19",
+    "ask": "96688.19",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768316400000,
+    "bid": "96386.76",
+    "ask": "96391.76",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768320000000,
+    "bid": "96529.35",
+    "ask": "96534.35",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768323600000,
+    "bid": "96884.64",
+    "ask": "96889.64",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768327200000,
+    "bid": "97260.75",
+    "ask": "97265.75",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768330800000,
+    "bid": "96828.53",
+    "ask": "96833.53",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768334400000,
+    "bid": "96796.00",
+    "ask": "96801.00",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768338000000,
+    "bid": "96547.25",
+    "ask": "96552.25",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768341600000,
+    "bid": "96443.26",
+    "ask": "96448.26",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768345200000,
+    "bid": "96234.14",
+    "ask": "96239.14",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768348800000,
+    "bid": "96004.75",
+    "ask": "96009.75",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768352400000,
+    "bid": "95803.30",
+    "ask": "95808.30",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768356000000,
+    "bid": "95154.85",
+    "ask": "95159.85",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768359600000,
+    "bid": "94652.61",
+    "ask": "94657.61",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768363200000,
+    "bid": "94140.71",
+    "ask": "94145.71",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768366800000,
+    "bid": "94202.35",
+    "ask": "94207.35",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768370400000,
+    "bid": "93923.32",
+    "ask": "93928.32",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768374000000,
+    "bid": "94147.09",
+    "ask": "94152.09",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768377600000,
+    "bid": "93990.95",
+    "ask": "93995.95",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768381200000,
+    "bid": "94278.02",
+    "ask": "94283.02",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768384800000,
+    "bid": "94117.62",
+    "ask": "94122.62",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768388400000,
+    "bid": "94544.82",
+    "ask": "94549.82",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768392000000,
+    "bid": "94408.56",
+    "ask": "94413.56",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768395600000,
+    "bid": "94696.74",
+    "ask": "94701.74",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768399200000,
+    "bid": "95095.05",
+    "ask": "95100.05",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768402800000,
+    "bid": "94831.46",
+    "ask": "94836.46",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768406400000,
+    "bid": "95125.08",
+    "ask": "95130.08",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  },
+  {
+    "open_time_ms": 1768410000000,
+    "bid": "94902.69",
+    "ask": "94907.69",
+    "capacity_base": "0.01",
+    "maker_buy_filled": false,
+    "maker_sell_filled": false
+  }
+]
