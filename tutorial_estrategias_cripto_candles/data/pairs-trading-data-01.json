@@ -1,0 +1,332 @@
+[
+  {
+    "open_time_ms": 1768176000000,
+    "eth_price": "3000.00",
+    "eth_close": "3005.32"
+  },
+  {
+    "open_time_ms": 1768179600000,
+    "eth_price": "3005.32",
+    "eth_close": "3010.32"
+  },
+  {
+    "open_time_ms": 1768183200000,
+    "eth_price": "3010.32",
+    "eth_close": "3014.71"
+  },
+  {
+    "open_time_ms": 1768186800000,
+    "eth_price": "3014.71",
+    "eth_close": "3018.26"
+  },
+  {
+    "open_time_ms": 1768190400000,
+    "eth_price": "3018.26",
+    "eth_close": "3020.87"
+  },
+  {
+    "open_time_ms": 1768194000000,
+    "eth_price": "3020.87",
+    "eth_close": "3022.52"
+  },
+  {
+    "open_time_ms": 1768197600000,
+    "eth_price": "3022.52",
+    "eth_close": "3023.34"
+  },
+  {
+    "open_time_ms": 1768201200000,
+    "eth_price": "3023.34",
+    "eth_close": "3023.50"
+  },
+  {
+    "open_time_ms": 1768204800000,
+    "eth_price": "3023.50",
+    "eth_close": "3023.29"
+  },
+  {
+    "open_time_ms": 1768208400000,
+    "eth_price": "3023.29",
+    "eth_close": "3022.97"
+  },
+  {
+    "open_time_ms": 1768212000000,
+    "eth_price": "3022.97",
+    "eth_close": "3022.82"
+  },
+  {
+    "open_time_ms": 1768215600000,
+    "eth_price": "3022.82",
+    "eth_close": "3023.06"
+  },
+  {
+    "open_time_ms": 1768219200000,
+    "eth_price": "3023.06",
+    "eth_close": "3023.80"
+  },
+  {
+    "open_time_ms": 1768222800000,
+    "eth_price": "3023.80",
+    "eth_close": "3025.07"
+  },
+  {
+    "open_time_ms": 1768226400000,
+    "eth_price": "3025.07",
+    "eth_close": "3026.80"
+  },
+  {
+    "open_time_ms": 1768230000000,
+    "eth_price": "3026.80",
+    "eth_close": "3028.81"
+  },
+  {
+    "open_time_ms": 1768233600000,
+    "eth_price": "3028.81",
+    "eth_close": "3030.84"
+  },
+  {
+    "open_time_ms": 1768237200000,
+    "eth_price": "3030.84",
+    "eth_close": "3032.63"
+  },
+  {
+    "open_time_ms": 1768240800000,
+    "eth_price": "3032.63",
+    "eth_close": "3033.88"
+  },
+  {
+    "open_time_ms": 1768244400000,
+    "eth_price": "3033.88",
+    "eth_close": "3034.38"
+  },
+  {
+    "open_time_ms": 1768248000000,
+    "eth_price": "3034.38",
+    "eth_close": "3033.96"
+  },
+  {
+    "open_time_ms": 1768251600000,
+    "eth_price": "3033.96",
+    "eth_close": "3032.59"
+  },
+  {
+    "open_time_ms": 1768255200000,
+    "eth_price": "3032.59",
+    "eth_close": "3030.32"
+  },
+  {
+    "open_time_ms": 1768258800000,
+    "eth_price": "3030.32",
+    "eth_close": "3027.33"
+  },
+  {
+    "open_time_ms": 1768262400000,
+    "eth_price": "3027.33",
+    "eth_close": "3023.88"
+  },
+  {
+    "open_time_ms": 1768266000000,
+    "eth_price": "3023.88",
+    "eth_close": "3020.30"
+  },
+  {
+    "open_time_ms": 1768269600000,
+    "eth_price": "3020.30",
+    "eth_close": "3016.92"
+  },
+  {
+    "open_time_ms": 1768273200000,
+    "eth_price": "3016.92",
+    "eth_close": "3014.05"
+  },
+  {
+    "open_time_ms": 1768276800000,
+    "eth_price": "3014.05",
+    "eth_close": "3011.95"
+  },
+  {
+    "open_time_ms": 1768280400000,
+    "eth_price": "3011.95",
+    "eth_close": "3010.77"
+  },
+  {
+    "open_time_ms": 1768284000000,
+    "eth_price": "3010.77",
+    "eth_close": "3010.56"
+  },
+  {
+    "open_time_ms": 1768287600000,
+    "eth_price": "3010.56",
+    "eth_close": "3011.27"
+  },
+  {
+    "open_time_ms": 1768291200000,
+    "eth_price": "3011.27",
+    "eth_close": "3012.72"
+  },
+  {
+    "open_time_ms": 1768294800000,
+    "eth_price": "3012.72",
+    "eth_close": "3014.68"
+  },
+  {
+    "open_time_ms": 1768298400000,
+    "eth_price": "3014.68",
+    "eth_close": "3016.88"
+  },
+  {
+    "open_time_ms": 1768302000000,
+    "eth_price": "3016.88",
+    "eth_close": "3019.03"
+  },
+  {
+    "open_time_ms": 1768305600000,
+    "eth_price": "3019.03",
+    "eth_close": "3020.89"
+  },
+  {
+    "open_time_ms": 1768309200000,
+    "eth_price": "3020.89",
+    "eth_close": "3022.28"
+  },
+  {
+    "open_time_ms": 1768312800000,
+    "eth_price": "3022.28",
+    "eth_close": "3023.15"
+  },
+  {
+    "open_time_ms": 1768316400000,
+    "eth_price": "3023.15",
+    "eth_close": "3023.51"
+  },
+  {
+    "open_time_ms": 1768320000000,
+    "eth_price": "3023.51",
+    "eth_close": "3023.50"
+  },
+  {
+    "open_time_ms": 1768323600000,
+    "eth_price": "3023.50",
+    "eth_close": "3023.34"
+  },
+  {
+    "open_time_ms": 1768327200000,
+    "eth_price": "3023.34",
+    "eth_close": "3023.30"
+  },
+  {
+    "open_time_ms": 1768330800000,
+    "eth_price": "3023.30",
+    "eth_close": "3023.66"
+  },
+  {
+    "open_time_ms": 1768334400000,
+    "eth_price": "3023.66",
+    "eth_close": "3024.68"
+  },
+  {
+    "open_time_ms": 1768338000000,
+    "eth_price": "3024.68",
+    "eth_close": "3026.54"
+  },
+  {
+    "open_time_ms": 1768341600000,
+    "eth_price": "3026.54",
+    "eth_close": "3029.35"
+  },
+  {
+    "open_time_ms": 1768345200000,
+    "eth_price": "3029.35",
+    "eth_close": "3033.08"
+  },
+  {
+    "open_time_ms": 1768348800000,
+    "eth_price": "3033.08",
+    "eth_close": "3037.63"
+  },
+  {
+    "open_time_ms": 1768352400000,
+    "eth_price": "3037.63",
+    "eth_close": "3042.75"
+  },
+  {
+    "open_time_ms": 1768356000000,
+    "eth_price": "3042.75",
+    "eth_close": "3048.17"
+  },
+  {
+    "open_time_ms": 1768359600000,
+    "eth_price": "3048.17",
+    "eth_close": "3053.53"
+  },
+  {
+    "open_time_ms": 1768363200000,
+    "eth_price": "3053.53",
+    "eth_close": "3058.52"
+  },
+  {
+    "open_time_ms": 1768366800000,
+    "eth_price": "3058.52",
+    "eth_close": "3062.83"
+  },
+  {
+    "open_time_ms": 1768370400000,
+    "eth_price": "3062.83",
+    "eth_close": "3066.26"
+  },
+  {
+    "open_time_ms": 1768374000000,
+    "eth_price": "3066.26",
+    "eth_close": "3068.70"
+  },
+  {
+    "open_time_ms": 1768377600000,
+    "eth_price": "3068.70",
+    "eth_close": "3070.16"
+  },
+  {
+    "open_time_ms": 1768381200000,
+    "eth_price": "3070.16",
+    "eth_close": "3070.76"
+  },
+  {
+    "open_time_ms": 1768384800000,
+    "eth_price": "3070.76",
+    "eth_close": "3070.73"
+  },
+  {
+    "open_time_ms": 1768388400000,
+    "eth_price": "3070.73",
+    "eth_close": "3070.32"
+  },
+  {
+    "open_time_ms": 1768392000000,
+    "eth_price": "3070.32",
+    "eth_close": "3069.84"
+  },
+  {
+    "open_time_ms": 1768395600000,
+    "eth_price": "3069.84",
+    "eth_close": "3069.54"
+  },
+  {
+    "open_time_ms": 1768399200000,
+    "eth_price": "3069.54",
+    "eth_close": "3069.65"
+  },
+  {
+    "open_time_ms": 1768402800000,
+    "eth_price": "3069.65",
+    "eth_close": "3070.28"
+  },
+  {
+    "open_time_ms": 1768406400000,
+    "eth_price": "3070.28",
+    "eth_close": "3071.45"
+  },
+  {
+    "open_time_ms": 1768410000000,
+    "eth_price": "3071.45",
+    "eth_close": "3073.07"
+  }
+]
