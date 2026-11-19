@@ -1,0 +1,860 @@
+[
+  {
+    "open_time_ms": 1768176000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "0.00000000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "0.00000000"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768179600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "12263611.19760000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "6130052.98264797"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768183200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "18608673.19880000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "12385147.74748648"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768186800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "25960161.56080000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "18755014.40968322"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768190400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "35155164.02020000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "25224567.84866719"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768194000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "42342236.25700000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00000000",
+        "liquidity": "31774702.73943774"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768197600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.12618324",
+        "liquidity": "47917951.44100000"
+      },
+      "ETHUSDT": {
+        "roc": "0.57231842",
+        "liquidity": "38383164.09505086"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768201200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.50758147",
+        "liquidity": "51013860.57400000"
+      },
+      "ETHUSDT": {
+        "roc": "0.43251216",
+        "liquidity": "45025714.01239050"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768204800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.30754505",
+        "liquidity": "57827701.65010000"
+      },
+      "ETHUSDT": {
+        "roc": "0.29157033",
+        "liquidity": "51677156.17015484"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768208400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.20811060",
+        "liquidity": "68717710.01050000"
+      },
+      "ETHUSDT": {
+        "roc": "0.16665231",
+        "liquidity": "58312580.93095957"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768212000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.38440739",
+        "liquidity": "74735477.53550000"
+      },
+      "ETHUSDT": {
+        "roc": "0.06951640",
+        "liquidity": "64908276.69944852"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768215600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.57433456",
+        "liquidity": "79758532.97630000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00992549",
+        "liquidity": "71442704.51931546"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768219200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.02311749",
+        "liquidity": "88793586.02260000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.00926128",
+        "liquidity": "77897217.66383416"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768222800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.19455802",
+        "liquidity": "94036943.21830000"
+      },
+      "ETHUSDT": {
+        "roc": "0.00992228",
+        "liquidity": "84256572.27344393"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768226400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.10527543",
+        "liquidity": "97412901.55090000"
+      },
+      "ETHUSDT": {
+        "roc": "0.05887626",
+        "liquidity": "90509384.79411878"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768230000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.25234319",
+        "liquidity": "104950917.83350000"
+      },
+      "ETHUSDT": {
+        "roc": "0.12669659",
+        "liquidity": "96648413.20219193"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768233600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.00363004",
+        "liquidity": "113235445.92950000"
+      },
+      "ETHUSDT": {
+        "roc": "0.19815933",
+        "liquidity": "102670672.36430737"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768237200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.13724554",
+        "liquidity": "121649567.98870000"
+      },
+      "ETHUSDT": {
+        "roc": "0.25735513",
+        "liquidity": "108577451.52555992"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768240800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.39053070",
+        "liquidity": "125645111.20270000"
+      },
+      "ETHUSDT": {
+        "roc": "0.29201667",
+        "liquidity": "114374311.37116695"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768244400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.58164421",
+        "liquidity": "129380169.68630000"
+      },
+      "ETHUSDT": {
+        "roc": "0.29123293",
+        "liquidity": "120070810.68752787"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768248000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.67570209",
+        "liquidity": "135632024.18230000"
+      },
+      "ETHUSDT": {
+        "roc": "0.25042950",
+        "liquidity": "125680285.41639019"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768251600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "1.02895722",
+        "liquidity": "128442014.72020000"
+      },
+      "ETHUSDT": {
+        "roc": "0.17003378",
+        "liquidity": "125089287.22765607"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768255200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.86884380",
+        "liquidity": "128887307.77360000"
+      },
+      "ETHUSDT": {
+        "roc": "0.05773977",
+        "liquidity": "124322208.67615989"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768258800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.92370991",
+        "liquidity": "130086107.85050000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.07617151",
+        "liquidity": "123410741.66952701"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768262400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.30026717",
+        "liquidity": "127283776.56710000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.21589516",
+        "liquidity": "122392704.42948107"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768266000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.89055227",
+        "liquidity": "126642690.28070000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.34603445",
+        "liquidity": "121310395.15158479"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768269600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.96379388",
+        "liquidity": "127281440.78790000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.45023665",
+        "liquidity": "120208874.17664953"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768273200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.86880566",
+        "liquidity": "128929315.78740000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.51672003",
+        "liquidity": "119133890.53175402"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768276800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.58269937",
+        "liquidity": "128214803.17830000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.53690699",
+        "liquidity": "118130014.53202732"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768280400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "1.06715293",
+        "liquidity": "126164538.37590000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.50803844",
+        "liquidity": "117238618.06437382"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768284000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.79981171",
+        "liquidity": "125931950.12380000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.43354895",
+        "liquidity": "116496211.13598175"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768287600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.74129842",
+        "liquidity": "127802472.12300000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.32248452",
+        "liquidity": "115932874.18961610"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768291200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.62260896",
+        "liquidity": "124880175.46000000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.18727709",
+        "liquidity": "115571093.26991513"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768294800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "1.08310863",
+        "liquidity": "125412856.96450000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.04412667",
+        "liquidity": "115424896.03963411"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768298400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.96541517",
+        "liquidity": "126069533.53550000"
+      },
+      "ETHUSDT": {
+        "roc": "0.09063895",
+        "liquidity": "115499362.24644823"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768302000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.81775345",
+        "liquidity": "124174441.84790000"
+      },
+      "ETHUSDT": {
+        "roc": "0.20293812",
+        "liquidity": "115790503.78435230"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768305600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.91132551",
+        "liquidity": "119105534.31730000"
+      },
+      "ETHUSDT": {
+        "roc": "0.28134301",
+        "liquidity": "116285526.04043667"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768309200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "1.02723695",
+        "liquidity": "119939558.62360000"
+      },
+      "ETHUSDT": {
+        "roc": "0.31946654",
+        "liquidity": "116963506.53908836"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768312800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.83314815",
+        "liquidity": "120882873.08960000"
+      },
+      "ETHUSDT": {
+        "roc": "0.31732122",
+        "liquidity": "117796271.54676999"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768316400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.85998055",
+        "liquidity": "121971106.57600000"
+      },
+      "ETHUSDT": {
+        "roc": "0.28095851",
+        "liquidity": "118749821.49330804"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768320000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.88613611",
+        "liquidity": "127714326.54800000"
+      },
+      "ETHUSDT": {
+        "roc": "0.21976346",
+        "liquidity": "119785633.67488124"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768323600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.78404760",
+        "liquidity": "127422977.12630000"
+      },
+      "ETHUSDT": {
+        "roc": "0.14806080",
+        "liquidity": "120862438.64860387"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768327200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "1.10363201",
+        "liquidity": "130426337.90230000"
+      },
+      "ETHUSDT": {
+        "roc": "0.08110193",
+        "liquidity": "121937851.04782456"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768330800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.98275072",
+        "liquidity": "134542762.43140000"
+      },
+      "ETHUSDT": {
+        "roc": "0.03374935",
+        "liquidity": "122970111.94144667"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768334400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.86567183",
+        "liquidity": "134189698.17490000"
+      },
+      "ETHUSDT": {
+        "roc": "0.01686982",
+        "liquidity": "123919633.88640545"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768338000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.94955460",
+        "liquidity": "133221522.93000000"
+      },
+      "ETHUSDT": {
+        "roc": "0.03869675",
+        "liquidity": "124750473.58152437"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768341600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.64079778",
+        "liquidity": "131601321.59540000"
+      },
+      "ETHUSDT": {
+        "roc": "0.10054573",
+        "liquidity": "125431530.24897056"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768345200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.43354093",
+        "liquidity": "133576720.18670000"
+      },
+      "ETHUSDT": {
+        "roc": "0.19878677",
+        "liquidity": "125937674.66354382"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768348800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.38030114",
+        "liquidity": "136436510.34420000"
+      },
+      "ETHUSDT": {
+        "roc": "0.32348758",
+        "liquidity": "126250519.09080176"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768352400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.01158262",
+        "liquidity": "139245432.76270000"
+      },
+      "ETHUSDT": {
+        "roc": "0.46202285",
+        "liquidity": "126359105.19817379"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768356000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.00333618",
+        "liquidity": "144712028.97110000"
+      },
+      "ETHUSDT": {
+        "roc": "0.59741857",
+        "liquidity": "126260252.31103872"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768359600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.11150308",
+        "liquidity": "142706357.40100000"
+      },
+      "ETHUSDT": {
+        "roc": "0.71467749",
+        "liquidity": "125958834.03223709"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768363200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.03778705",
+        "liquidity": "140147420.43910000"
+      },
+      "ETHUSDT": {
+        "roc": "0.79819103",
+        "liquidity": "125467603.21578118"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768366800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.12095628",
+        "liquidity": "139131211.92390000"
+      },
+      "ETHUSDT": {
+        "roc": "0.83875137",
+        "liquidity": "124807020.41995803"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768370400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.04479439",
+        "liquidity": "140077629.63590000"
+      },
+      "ETHUSDT": {
+        "roc": "0.82959412",
+        "liquidity": "124004513.50977224"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768374000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.61495349",
+        "liquidity": "139792098.53970000"
+      },
+      "ETHUSDT": {
+        "roc": "0.77265631",
+        "liquidity": "123093617.56964783"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768377600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.42020629",
+        "liquidity": "144537837.19550000"
+      },
+      "ETHUSDT": {
+        "roc": "0.67351887",
+        "liquidity": "122112775.61195949"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768381200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.11441420",
+        "liquidity": "140046539.14440000"
+      },
+      "ETHUSDT": {
+        "roc": "0.54461558",
+        "liquidity": "121103838.81879332"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768384800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.17147000",
+        "liquidity": "140263092.99160000"
+      },
+      "ETHUSDT": {
+        "roc": "0.40019356",
+        "liquidity": "120110392.13825893"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768388400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.27482663",
+        "liquidity": "140598355.61430000"
+      },
+      "ETHUSDT": {
+        "roc": "0.25793139",
+        "liquidity": "119175877.21863038"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768392000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.01752281",
+        "liquidity": "136779859.36020000"
+      },
+      "ETHUSDT": {
+        "roc": "0.13240886",
+        "liquidity": "118341740.19587612"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768395600000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.23125799",
+        "liquidity": "141865009.89620000"
+      },
+      "ETHUSDT": {
+        "roc": "0.03714928",
+        "liquidity": "117645619.11227516"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768399200000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.47797983",
+        "liquidity": "138038370.74410000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.02019439",
+        "liquidity": "117119604.77156999"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768402800000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.20935535",
+        "liquidity": "131503227.21130000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.03614740",
+        "liquidity": "116788886.41975151"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768406400000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "-0.46041364",
+        "liquidity": "135266786.33860000"
+      },
+      "ETHUSDT": {
+        "roc": "-0.01465450",
+        "liquidity": "116670568.27301631"
+      }
+    }
+  },
+  {
+    "open_time_ms": 1768410000000,
+    "universe": {
+      "BTCUSDT": {
+        "roc": "0.12727251",
+        "liquidity": "135122543.45390000"
+      },
+      "ETHUSDT": {
+        "roc": "0.03680398",
+        "liquidity": "116772907.37408970"
+      }
+    }
+  }
+]
