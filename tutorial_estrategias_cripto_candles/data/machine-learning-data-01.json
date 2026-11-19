@@ -1,0 +1,398 @@
+[
+  {
+    "open_time_ms": 1768176000000,
+    "probability": "0.5000",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768179600000,
+    "probability": "0.5000",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768183200000,
+    "probability": "0.5000",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768186800000,
+    "probability": "0.5000",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768190400000,
+    "probability": "0.5000",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768194000000,
+    "probability": "0.5000",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768197600000,
+    "probability": "0.4952",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768201200000,
+    "probability": "0.4889",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768204800000,
+    "probability": "0.4868",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768208400000,
+    "probability": "0.4773",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768212000000,
+    "probability": "0.4518",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768215600000,
+    "probability": "0.5356",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768219200000,
+    "probability": "0.4588",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768222800000,
+    "probability": "0.4606",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768226400000,
+    "probability": "0.4777",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768230000000,
+    "probability": "0.4533",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768233600000,
+    "probability": "0.4029",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768237200000,
+    "probability": "0.5251",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768240800000,
+    "probability": "0.5840",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768244400000,
+    "probability": "0.5744",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768248000000,
+    "probability": "0.6020",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768251600000,
+    "probability": "0.6283",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768255200000,
+    "probability": "0.5909",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768258800000,
+    "probability": "0.5395",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768262400000,
+    "probability": "0.5745",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768266000000,
+    "probability": "0.5733",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768269600000,
+    "probability": "0.5964",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768273200000,
+    "probability": "0.5893",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768276800000,
+    "probability": "0.5934",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768280400000,
+    "probability": "0.5824",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768284000000,
+    "probability": "0.5805",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768287600000,
+    "probability": "0.5718",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768291200000,
+    "probability": "0.5847",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768294800000,
+    "probability": "0.5975",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768298400000,
+    "probability": "0.5908",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768302000000,
+    "probability": "0.6411",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768305600000,
+    "probability": "0.5810",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768309200000,
+    "probability": "0.5796",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768312800000,
+    "probability": "0.5639",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768316400000,
+    "probability": "0.5921",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768320000000,
+    "probability": "0.5598",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768323600000,
+    "probability": "0.6061",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768327200000,
+    "probability": "0.5825",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768330800000,
+    "probability": "0.5999",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768334400000,
+    "probability": "0.5773",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768338000000,
+    "probability": "0.5883",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768341600000,
+    "probability": "0.5740",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768345200000,
+    "probability": "0.5620",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768348800000,
+    "probability": "0.5282",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768352400000,
+    "probability": "0.5065",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768356000000,
+    "probability": "0.5121",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768359600000,
+    "probability": "0.4806",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768363200000,
+    "probability": "0.5080",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768366800000,
+    "probability": "0.5107",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768370400000,
+    "probability": "0.5010",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768374000000,
+    "probability": "0.4532",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768377600000,
+    "probability": "0.4804",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768381200000,
+    "probability": "0.4229",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768384800000,
+    "probability": "0.4462",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768388400000,
+    "probability": "0.4666",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768392000000,
+    "probability": "0.4684",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768395600000,
+    "probability": "0.4872",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768399200000,
+    "probability": "0.4968",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768402800000,
+    "probability": "0.4920",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768406400000,
+    "probability": "0.4655",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  },
+  {
+    "open_time_ms": 1768410000000,
+    "probability": "0.4766",
+    "trained_until_ms": 1768175999999,
+    "model_id": "modelo-sintetico-momentum-5-v1-nao-treinado"
+  }
+]
